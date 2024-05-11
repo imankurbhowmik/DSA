@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class primitives {
+public class one_primitives {
     public static void main(String[] args) {
         // primitive is that datatype which can't be broken into further datatypes
         int rollno = 64;
