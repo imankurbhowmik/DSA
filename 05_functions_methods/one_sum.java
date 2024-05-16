@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class sum{
+public class one_sum{
     public static void main(String[] args) {
         // sum();
         System.out.println(sum2());
