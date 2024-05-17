@@ -24,7 +24,7 @@ public class three_multiDimensionalArray {
 
         for(int row=0; row<arr.length; row++){
             for(int col=0; col<arr[row].length; col++){
-                arr[row][col] = sc.nextInt();
+                // arr[row][col] = sc.nextInt();
             }
         }
 
@@ -41,7 +41,13 @@ public class three_multiDimensionalArray {
         // }
 
         for (int[] a  : arr) {
-            System.out.println(a);
+            // System.out.println(a);
+        }
+
+        for(int row =0; row< arr2.length; row++){
+            for(int col=0 ; col<arr2[row].length; col++){
+                System.out.print(arr2[row][col]);
+            }System.out.println();
         }
 
 
