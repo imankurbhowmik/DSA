@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class fourteen_SearchIn2DArrays {
+public class fifteen_SearchIn2DArrays {
     public static void main(String[] args) {
         int[][] arr = {
             {10, 20, 30, 40},
