@@ -17,7 +17,7 @@ public class One_constructor {
 
 
         Student[] students = new Student[5];
-        System.out.println(Arrays.toString(students)); // null
+        System.out.println(Arrays.toString(students)); // [null, null,null,null,null,]
 
         Student Ankur;
         Ankur = new Student(4, "Ankur", 86.4f);
@@ -53,47 +53,48 @@ public class One_constructor {
     // create a class
     // for every single student
 
-}
-class Student{
-    int rollnos;
-    String naams;
-    float marks = 90.0f;
+    static class Student {
+        int rollnos;
+        String naams;
+        float marks = 90.0f;
 
 
-    void changeName(String newName) {
-        naams = newName;
-    }
+        void changeName(String newName) {
+            naams = newName;
+        }
 
-    void greeting() {
-        System.out.println("Hello my name is" + naams);
-    }
-
-
-    Student (Student other) {
-        this.rollnos = other.rollnos;
-        this.naams = other.naams;
-        this.marks = other.marks;
-
-    }
-
-    // we need a way to add these values of above props object by object
-
-    Student() {
-//        this.naams = "Ankur";
-//        this.rollnos = 64;
-//        this.marks = 86.4f;
+        void greeting() {
+            System.out.println("Hello my name is" + naams);
+        }
 
 
-        // this is how u call another constructor from a constructor
-        this(13, "kuku", 90.9f);
-    }
+        Student(Student other) {
+            this.rollnos = other.rollnos;
+            this.naams = other.naams;
+            this.marks = other.marks;
+
+        }
+
+        // we need a way to add these values of above props object by object
+
+        Student() {
+    //        this.naams = "Ankur";
+    //        this.rollnos = 64;
+    //        this.marks = 86.4f;
 
 
-    // Student arpit = new Student (56, "Arpit", 90.8f)
-    // here this will be replaced by arpit
-    Student(int roll, String name, float marks) {
-        this.rollnos = roll;
-        this.naams = name;
-        this.marks = marks;
+            // this is how u call another constructor from a constructor
+            // internally : new Student(13, "kuku", 90.9f);
+            this(13, "kuku", 90.9f);
+        }
+
+
+        // One_constructor.Student arpit = new One_constructor.Student (56, "Arpit", 90.8f)
+        // here this will be replaced by arpit
+        Student(int roll, String name, float marks) {
+            this.rollnos = roll;
+            this.naams = name;
+            this.marks = marks;
+        }
     }
 }

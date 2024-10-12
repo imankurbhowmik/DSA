@@ -26,6 +26,8 @@ public class Three_main {
         obj.greeting();
     }
 
+
+    // this will work since at the end it will be called in Main and object would be definitely created
     void fun2() {
         greeting();
     }
@@ -35,3 +37,4 @@ public class Three_main {
         System.out.println("Hello world");
     }
 }
+
