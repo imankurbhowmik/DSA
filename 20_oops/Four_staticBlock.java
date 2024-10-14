@@ -1,5 +1,7 @@
 // this is a demo to show initialisation of static variables
 
+
+// all the static stuffs would be run first when the class is loaded
 public class Four_staticBlock {
     static int a = 4;
     static int b;

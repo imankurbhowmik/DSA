@@ -39,7 +39,7 @@ class A {
     }
 
 
-    /// this will be called on garbage
+    /// this will be called on garbage; whenever any object of class A is deleted this will be called
     @Override
     protected void finalize() throws Throwable {
         System.out.println("Object is destroyed");
