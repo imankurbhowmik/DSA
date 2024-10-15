@@ -1,6 +1,6 @@
 public class Seven_main {
     public static void main(String[] args) {
-//        Seven_inheritanceBox box = new Seven_inheritanceBox();
+        Seven_inheritanceBox box = new Seven_inheritanceBox();
 //        Seven_inheritanceBox box2 = new Seven_inheritanceBox();
 //
 //        System.out.println(box.l + " " + box.h + " " + box.w + " ");
@@ -25,7 +25,14 @@ public class Seven_main {
 
 
 
+
         Seven_boxPrice box6 = new Seven_boxPrice();
+
+        box.greeting();
+
+        box4.greeting();
+
+
     }
 
 

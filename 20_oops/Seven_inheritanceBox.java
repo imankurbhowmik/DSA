@@ -31,4 +31,8 @@ public class Seven_inheritanceBox {
     public void information() {
         System.out.println("Box is running");
     }
+
+    public static void greeting() {
+        System.out.println("Hey I am in Box class. Greetings!!");
+    }
 }

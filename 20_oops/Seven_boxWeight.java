@@ -1,4 +1,5 @@
 public class Seven_boxWeight extends Seven_inheritanceBox {
+    double w;
     double weight;
 
     public Seven_boxWeight() {
@@ -14,5 +15,10 @@ public class Seven_boxWeight extends Seven_inheritanceBox {
     Seven_boxWeight(Seven_boxWeight other) {
         super(other);   // this is similar to Seven_inheritanceBox box = new Seven_boxWeight();
         weight = other.weight;
+    }
+
+//    @Override
+    public static void greeting() {
+        System.out.println("Hey I am in Boxweight class. Greetings!!");
     }
 }
