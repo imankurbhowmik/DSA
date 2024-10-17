@@ -17,7 +17,7 @@ public class Ten_objectDemo {
 
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        return this.num == ((Ten_objectDemo)obj).num;
     }
 
     @Override
@@ -36,6 +36,8 @@ public class Ten_objectDemo {
         if(obj.equals(obj2)) {
             System.out.println("obj is equal to obj2");
         }
+
+        System.out.println(obj.getClass().getName());
 
 //        System.out.println(obj.hashCode());
 //        System.out.println(obj2.hashCode());
