@@ -1,4 +1,4 @@
-public class Twelve_interfaceCar implements Twelve_interfaceEngine, Twelve_interfaceBrake{
+public class Twelve_interfaceCar implements Twelve_interfaceEngine, Twelve_interfaceBrake, Twelve_interfaceMedia{
     @Override
     public void brake() {
         System.out.println("I brake like a normal car");
@@ -6,12 +6,12 @@ public class Twelve_interfaceCar implements Twelve_interfaceEngine, Twelve_inter
 
     @Override
     public void start() {
-        System.out.println("I start like a normal car");
+        System.out.println("I start engine like a normal car");
     }
 
     @Override
     public void stop() {
-        System.out.println("I stop like a normal car");
+        System.out.println("I stop engine like a normal car");
     }
 
     @Override
