@@ -1,4 +1,4 @@
-public class One_customLLMain {
+public class Main {
     public static void main(String[] args) {
         Three_customCLL list = new Three_customCLL();
 
@@ -28,7 +28,9 @@ public class One_customLLMain {
         list.insert(12);
         list.insert(3);
         list.insert(5);
+        list.delete(5);
 
         list.display();
     }
 }
+
