@@ -8,7 +8,9 @@ public class One_customLLMain {
         list.insertFirst(9);
         list.insertFirst(17);
         list.insertLast(99);
+        list.insert(100, 3);
 
+        System.out.println(list.deleteLast());
         list.display();
     }
 }
