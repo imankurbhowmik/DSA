@@ -149,4 +149,68 @@ public class One_customLL {
             this.next = next;
         }
     }
+
+    // questions
+
+    // duplicates
+    public void duplicates() {
+        Node node = head;
+
+        while(node.next != null) {
+            if(node.value == node.next.value) {
+                node.next = node.next.next;
+                size--;
+            }else{
+                node = node.next;
+            }
+        }tail = node;
+        tail.next = null;
+    }
+
+    // merge
+
+    public static One_customLL merge(One_customLL first, One_customLL second) {
+        Node f = first.head;
+        Node s = second.head;
+
+        One_customLL ans = new One_customLL();
+
+        while(f != null && s != null) {
+            if(f.value < s.value) {
+                ans.insertLast(f.value);
+                f = f.next;
+            }else{
+                ans.insertLast(s.value);
+                s = s.next;
+            }
+        }
+        while(f != null) {
+            ans.insertLast(f.value);
+            f = f.next;
+        }
+        while(s != null) {
+            ans.insertLast(s.value);
+            s = s.next;
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        One_customLL first = new One_customLL();
+        One_customLL second = new One_customLL();
+
+        first.insertLast(1);
+        first.insertLast(3);
+        first.insertLast(5);
+
+        second.insertLast(1);
+        second.insertLast(2);
+        second.insertLast(9);
+        second.insertLast(14);
+
+        One_customLL ans = One_customLL.merge(first, second);
+        ans.display();
+
+
+    }
 }
