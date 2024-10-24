@@ -222,9 +222,32 @@ public class One_customLL {
         }
         return 0;
     }
+//  detect start of cycle
+
+//    public ListNode detectCycle(ListNode head) {
+//
+//        if(calculateLength(head) == 0) {
+//            return null;
+//        }
+//
+//        ListNode first = head;
+//        ListNode second = head;
+//        int l = calculateLength(head);
+//
+//        while(l>0) {
+//            second = second.next;
+//            l--;
+//        }
+//
+//        while(first != second) {
+//            first = first.next;
+//            second = second.next;
+//        }
+//        return second;
+//
+//    }
 
     
-
 
 
     public static void main(String[] args) {
