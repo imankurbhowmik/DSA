@@ -195,6 +195,38 @@ public class One_customLL {
         return ans;
     }
 
+    // check cycle
+
+//
+
+    // find length of cycle
+
+    public int lengthCycle(Node head) {
+        Node fast = head;
+        Node slow = head;
+
+        while(fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(fast == slow) {
+                Node temp = slow;
+                int length = 0;
+
+                do {
+                    temp = temp.next;
+                    length++;
+                }while(temp != slow);
+                return length;
+            }
+        }
+        return 0;
+    }
+
+    
+
+
+
     public static void main(String[] args) {
         One_customLL first = new One_customLL();
         One_customLL second = new One_customLL();
