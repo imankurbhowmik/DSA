@@ -34,5 +34,11 @@ public class One_inbuiltExamples {
         System.out.println(queue.remove());
 
         Deque<Integer> dequeue = new ArrayDeque<>();
+
+        dequeue.add(56);
+        dequeue.addLast(89);
+        dequeue.removeFirst();
+
+
     }
 }
