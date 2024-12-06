@@ -49,7 +49,7 @@ public class Two_BST {
             node.right = insert(value, node.right);
         }
 
-        node.height = Math.max(height(node.left), height(node.right));
+        node.height = Math.max(height(node.left), height(node.right)+1);
 
         return node;
     }
