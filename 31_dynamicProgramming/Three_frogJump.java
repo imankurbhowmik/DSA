@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class Three_frogJump {
     public static int solve(int index, int[] height, int[] dp) {
         if(index == 0) return 0;
+        if(dp[index] != -1) return dp[index];
         int jumpTwo = Integer.MAX_VALUE;
         int jumpOne = solve(index-1, height, dp) + Math.abs(height[index] - height[index-1]);
         if(index > 1) {
@@ -40,11 +41,26 @@ public class Three_frogJump {
         return prev;
     }
 
+    public static int solve4(int index, int[] height, int[] dp, int k) {
+        dp[0] = 0;
+        for(int i=1; i<= index; i++) {
+            int minSteps = Integer.MAX_VALUE;
+            for(int j=1; j<=k; j++) {
+                if(j <= index) {
+                    int jump = dp[index-j] + Math.abs(height[index]-height[index-j]);
+                    minSteps = Math.min(jump, minSteps);
+                }
+            }
+            dp[i] = minSteps;
+        }
+        return dp[index];
+    }
+
     public static void main(String[] args) {
         int n = 5;
         int[] height = {10, 60, 70, 10, 40, 30};
         int[] dp = new int[n+1];
         Arrays.fill(dp, -1);
-        System.out.println(solve2(n, height, dp));
+        System.out.println(solve4(n, height, dp, 2));
     }
 }
