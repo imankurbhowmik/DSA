@@ -28,7 +28,7 @@ public class Seven_rottenOranges {
             int row = queue.peek()[0];
             int col = queue.peek()[1];
             int t = queue.peek()[2];
-            time = Math.max(t, time);
+            time = t;
             queue.poll();
             for(int i=0; i<4; i++) {
                 int nRow = row+delRow[i];
