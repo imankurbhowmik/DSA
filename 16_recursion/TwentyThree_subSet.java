@@ -35,6 +35,7 @@ static List<List<Integer>> subsetDuplicate(int arr[]) {
 
     for(int i=0; i<arr.length; i++) {
         int n = outer.size();
+        start = 0;
         if(i>0 && arr[i]==arr[i-1]){
             start = end+1;
         }
