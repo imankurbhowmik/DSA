@@ -195,8 +195,18 @@ public class One_customLL {
         return ans;
     }
 
-    // check cycle
+// check cycle
+    public static boolean checkCycle(Node head) {
+        Node fast = head;
+        Node slow = head;
 
+        while(fast.next==null && fast.next.next == null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast== slow) return true;
+        }
+        return false;
+    }
 //
 
     // find length of cycle
