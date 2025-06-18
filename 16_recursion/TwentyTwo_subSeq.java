@@ -18,7 +18,7 @@ public class TwentyTwo_subSeq {
         subSeq(p, up.substring(1));
     }
 
-    static ArrayList subSeqRet (String p, String up) {
+    static ArrayList<String> subSeqRet (String p, String up) {
         if(up.isEmpty()) {
             ArrayList<String> list = new ArrayList<>();
             list.add(p);
@@ -45,7 +45,7 @@ public class TwentyTwo_subSeq {
         subSeqAscii(p+(ch+0),up.substring(1));
     }
 
-    static ArrayList subSeqAsciiRet (String p, String up) {
+    static ArrayList<String> subSeqAsciiRet (String p, String up) {
         if(up.isEmpty()) {
             ArrayList<String> list = new ArrayList<>();
             list.add(p);

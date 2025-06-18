@@ -16,7 +16,7 @@ public class TwentySix_dice {
         }
     }
 
-    public static ArrayList diceRet(String p, int target) {
+    public static ArrayList<String> diceRet(String p, int target) {
         if(target == 0) {
             ArrayList<String> list = new ArrayList<>();
             list.add(p);
@@ -40,7 +40,7 @@ public class TwentySix_dice {
         }
     }
 
-    public static ArrayList diceRetFace(String p, int target, int face) {
+    public static ArrayList<String> diceRetFace(String p, int target, int face) {
         if(target == 0) {
             ArrayList<String> list = new ArrayList<>();
             list.add(p);
