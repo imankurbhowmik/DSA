@@ -27,24 +27,24 @@ public class Four_mergeSort {
              if (first.val < second.val) {
                  tail.next = first;
                  first = first.next;
-                 tail.next = tail;
+                 tail = tail.next;
              } else {
                  tail.next = second;
                  second = second.next;
-                 tail.next = tail;
+                 tail = tail.next;
              }
          }
 
              while(first!=null) {
                  tail.next = first;
                  first = first.next;
-                 tail.next = tail;
+                 tail = tail.next;
              }
 
              while(second != null){
                  tail.next = second;
                  second = second.next;
-                 tail.next = tail;
+                 tail = tail.next;
              }
 
              return ans.next;
@@ -53,13 +53,21 @@ public class Four_mergeSort {
 
 
     public Four_mergeSort middleNode(Four_mergeSort head) {
+
         Four_mergeSort fast = head;
         Four_mergeSort slow = head;
+        Four_mergeSort midPrev = slow;
 
         while(fast != null && fast.next!=null) {
+            midPrev = slow;
             slow = slow.next;
             fast = fast.next.next;
         }
+
+        if(midPrev!=null) {
+            midPrev.next = null;
+        }
+
         return slow;
 
     }

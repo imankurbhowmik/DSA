@@ -195,7 +195,7 @@ public class One_customLL {
         return ans;
     }
 
-// check cycle
+    // check cycle
     public static boolean checkCycle(Node head) {
         Node fast = head;
         Node slow = head;
@@ -285,15 +285,72 @@ public class One_customLL {
     public Node middleNode(Node head) {
         Node fast = head;
         Node slow = head;
+        Node midPrev = slow;
 
         while(fast != null && fast.next!=null) {
+            midPrev = slow;
             slow = slow.next;
             fast = fast.next.next;
+        }
+
+        if(midPrev!=null) {
+            midPrev.next = null;
         }
         return slow;
 
     }
 
+    // bubble sort
+    public void bubbleSort() {
+        bubbleSort(size-1, 0);
+    }
+
+    private void bubbleSort(int row, int col) {
+        if(row==0) {
+            return;
+        }
+
+        if(col<row) {
+            Node first = get(col);
+            Node second = get(col+1);
+
+            if(first.value > second.value) {
+                if(first==head) {
+                    head = second;
+                    first.next=second.next;
+                    second.next=first;
+                }
+                else if(second==tail) {
+                    Node p = get(col-1);
+                    p.next=second;
+                    tail=first;
+                    first.next= null;
+                    second.next= tail;
+                }
+                else {
+                    Node p = get(col-1);
+                    p.next=second;
+                    first.next= second.next;
+                    second.next=first;
+                }
+            }bubbleSort(row, col+1);
+        }else {
+            bubbleSort(row-1, 0);
+        }
+    }
+
+    //recursion reverse
+    private void reverse(Node node) {
+        if(node == tail) {
+            head = tail;
+            return;
+        }
+
+        reverse(node.next);
+        tail.next = node;
+        tail= node;
+        tail.next= null;
+    }
 
 
     public static void main(String[] args) {
